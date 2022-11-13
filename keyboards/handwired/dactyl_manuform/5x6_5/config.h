@@ -48,8 +48,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_DI_PIN D3
 #define DRIVER_LED_TOTAL 54
 #define RGB_MATRIX_SPLIT { 27, 27 }
-#define RGB_MATRIX_CENTER { 133, 54 }
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 20 // limits maximum brightness of LEDs (out of 255). If not defined maximum brightness is set to 255
+#define RGB_MATRIX_CENTER { 142, 23 }
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 160 // (40:ok; 80:ok, 100:ok, 140: ok) limits maximum brightness of LEDs (out of 255). If not defined maximum brightness is set to 255
 #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS // Sets the default brightness value, if none has been set
 
 #define BOOTMAGIC_LITE_ROW 0
@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	
 
 //#define ENABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
-//#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+#define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
 #define ENABLE_RGB_MATRIX_CYCLE_UP_DOWN
 //#define ENABLE_RGB_MATRIX_CYCLE_OUT_IN
-//#define ENABLE_RGB_MATRIX_RAINBOW_BEACON
+#define ENABLE_RGB_MATRIX_RAINBOW_BEACON

@@ -12,7 +12,7 @@ enum charybdis_keymap_layers {
     LAYER_NUMS,
     LAYER_MATHSYMS,
 	LAYER_QWERTY,
-	LAYER_UNKNOWN4,
+	LOCK,
 	LAYER_UNKNOWN5,
 	LAYER_UNKNOWN6,
 };
@@ -22,47 +22,47 @@ enum charybdis_keymap_layers {
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-        [LAYER_BASE] = LAYOUT_5x6_5(
-		KC_INS, 	KC_HOME, 	KC_END, 			KC_PGUP, 			KC_PGDN, 	KC_NO,	 											KC_ESC, 	KC_LEFT, 	KC_UP, 				KC_DOWN, 			KC_RGHT, 	KC_NO,
-		KC_QUOT, 	KC_COMM, 	KC_DOT, 			KC_P, 				KC_Y, 		KC_NO,	 											KC_F, 		KC_G, 		KC_C, 				KC_R, 				KC_L, 		KC_NO,
-		KC_A, 		KC_O, 		KC_E, 				KC_U, 				KC_I, 		KC_NO,	 											KC_D, 		KC_H, 		KC_T, 				KC_N, 				KC_S, 		KC_NO, 
-		KC_SCLN, 	KC_Q, 		KC_J, 				KC_K, 				KC_X, 		KC_NO, 												KC_B, 		KC_M, 		KC_W, 				KC_V, 				KC_Z, 		KC_NO, 
-								TT(LAYER_NUMS), 	TT(LAYER_MATHSYMS),	KC_SPC,		KC_LSFT, 	KC_TAB, 				KC_LGUI, 		KC_LSFT,	KC_ENT, 	TT(LAYER_MATHSYMS), 	TT(LAYER_NUMS), 		
-																					KC_LCTL,	KC_DEL,					KC_BSPC, 		KC_RALT), 
-				
+        [LAYER_BASE] = LAYOUT_5x6_5(	
+		KC_INS, 	KC_HOME, 			KC_END, 			KC_PGUP, 			KC_PGDN, 	KC_NO,	 												KC_ESC, 		KC_LEFT, 	KC_UP, 					KC_DOWN, 			KC_RGHT, 				KC_NO,
+		KC_QUOT, 	KC_COMM, 			KC_DOT, 			KC_P, 				KC_Y, 		KC_NO,	 												KC_F, 			KC_G, 		KC_C, 					KC_R, 				KC_L, 					KC_NO,
+		KC_A, 		KC_O, 				KC_E, 				KC_U, 				KC_I, 		KC_NO,	 												KC_D, 			KC_H, 		KC_T, 					KC_N, 				KC_S, 					KC_NO, 
+		KC_SCLN, 	KC_Q, 				KC_J, 				KC_K, 				KC_X, 		KC_NO, 													KC_B, 			KC_M, 		KC_W, 					KC_V, 				KC_Z, 					KC_NO, 
+										TT(LAYER_NUMS), 	TT(LAYER_MATHSYMS),	KC_SPC,		KC_LSFT, 	KC_TAB, 					KC_LGUI, 		KC_LSFT,		KC_ENT, 	TT(LAYER_MATHSYMS), 	TT(LAYER_NUMS), 		
+																							KC_DEL,		KC_LCTL,					KC_RALT, 		KC_BSPC), 
+
 				
 		[LAYER_NUMS] = LAYOUT_5x6_5(		
-		KC_NO, 		KC_NO, 				TO(0), 				TO(1), 		KC_NO,		KC_NO, 												KC_NO, 		KC_LEFT, 	KC_UP, 			KC_DOWN, 				KC_RGHT, 				KC_NO, 
-		KC_F1, 		KC_F2, 				KC_F3, 				KC_F4, 		KC_NO, 		KC_NO, 												KC_NO, 		KC_P7, 		KC_P8, 			KC_P9, 					KC_NUM, 				KC_NO, 
-		KC_F5, 		KC_F6, 				KC_F7, 				KC_F8, 		KC_NO, 		KC_NO, 												KC_NO, 		KC_P4, 		KC_P5, 			KC_P6, 					KC_DOT, 				KC_NO, 
-		KC_F9, 		KC_F10, 			KC_F11, 			KC_F12, 	KC_NO, 		KC_NO, 												KC_NO, 		KC_P1, 		KC_P2, 			KC_P3, 					KC_P0, 					KC_NO, 
-								TO(LAYER_BASE), 	TO(LAYER_MATHSYMS),	KC_SPC,		KC_LSFT, 		KC_0, 				TO(0), 			KC_LSFT,	KC_ENT, 	TO(LAYER_MATHSYMS), TO(LAYER_BASE), 		
-																		KC_LCTL,	KC_DEL,			KC_BSPC, 			KC_RALT), 	
+		KC_NO, 		KC_NO, 				TO(0), 				TO(1), 				KC_NO,		KC_NO, 													KC_NO, 			KC_LEFT, 		KC_UP, 				KC_DOWN, 			KC_RGHT, 				KC_NO, 
+		KC_F1, 		KC_F2, 				KC_F3, 				KC_F4, 				KC_NO, 		KC_NO, 													KC_NO, 			KC_P7, 			KC_P8, 				KC_P9, 				KC_NUM, 				KC_NO, 
+		KC_F5, 		KC_F6, 				KC_F7, 				KC_F8, 				KC_NO, 		KC_NO, 													KC_NO, 			KC_P4, 			KC_P5, 				KC_P6, 				KC_DOT, 				KC_NO, 
+		KC_F9, 		KC_F10, 			KC_F11, 			KC_F12, 			KC_NO, 		KC_NO, 													KC_NO, 			KC_P1, 			KC_P2, 				KC_P3, 				KC_P0, 					KC_NO, 
+										TO(LAYER_BASE), 	TO(LAYER_MATHSYMS),	KC_SPC,		KC_LSFT, 	KC_TAB, 					TO(0), 			KC_LSFT,		KC_ENT, 		TO(LAYER_MATHSYMS), TO(LAYER_BASE), 		
+																							KC_DEL,		KC_LCTL,					KC_RALT,		KC_BSPC), 	
 			
 			
 		[LAYER_MATHSYMS] = LAYOUT_5x6_5(	
-		KC_NO, 		KC_NO, 		KC_NO, 				KC_NO, 				KC_NO, 		KC_NO, 												KC_NO, 		KC_LEFT, 	KC_UP, 				KC_DOWN, 			KC_RGHT, 	KC_NO, 	
-		KC_COMM, 	KC_PERC, 	KC_AT, 				KC_QUOT, 			KC_COLN, 	KC_NO, 												KC_NO, 		KC_0, 		KC_CIRC, 			KC_DLR, 			KC_NO, 		KC_NO, 
-		KC_SLSH, 	KC_LCBR, 	KC_SCLN, 			KC_LPRN, 			KC_PLUS, 	KC_NO, 												KC_ASTR, 	KC_RPRN, 	KC_EQL, 			KC_RCBR, 			KC_MINS, 	KC_NO, 
-		KC_HASH, 	KC_GRV, 	KC_AMPR, 			KC_QUES, 			KC_PIPE, 	KC_NO, 												KC_BSLS, 	KC_EXLM, 	KC_LBRC, 			KC_RBRC, 			KC_UNDS, 	KC_NO,
-								TO(LAYER_NUMS), 	TO(LAYER_BASE),		KC_SPC,		KC_LSFT, 		KC_0, 				TO(0), 			KC_LSFT,	KC_ENT, 	TO(LAYER_BASE), 	TO(LAYER_NUMS), 		
-																		KC_LCTL,	KC_DEL,			KC_BSPC, 			KC_RALT), 
-		
-		[LAYER_QWERTY] = LAYOUT_5x6_5(
-		KC_GRV, 	KC_1, 		KC_2, 		TO(0), 				TO(2),   			KC_NO, 												KC_6, 		KC_7, 		KC_8, 		KC_9, 				KC_0, 				KC_NO, 
-		KC_TAB, 	KC_Q, 		KC_W, 		KC_E, 				KC_R, 				KC_NO, 												KC_Y, 		KC_U, 		KC_I, 		KC_O, 				KC_P, 				KC_NO, 
-		LCTL_T(KC_CAPS), KC_A, 	KC_S, 		KC_D, 				KC_D, 				KC_NO, 												KC_G, 		KC_H, 		KC_J, 		KC_K, 				KC_L, 				KC_NO, 
-		KC_LSFT, 	KC_Z, 		KC_X, 		KC_C, 				KC_V, 				KC_NO, 												KC_N, 		KC_M, 		KC_COMM, 	KC_DOT, 			KC_SLSH, 			KC_NO, 
-											TO(LAYER_NUMS), 	TO(LAYER_MATHSYMS),	KC_SPC,			KC_LSFT, 				KC_0, 		TO(0), 		KC_LSFT,	KC_ENT, 	TO(LAYER_NUMS), 	TO(LAYER_MATHSYMS), 		
-																					KC_LCTL,		KC_DEL,					KC_BSPC, 	KC_RALT), 
+		KC_NO, 		KC_NO, 		KC_NO, 				KC_NO, 				TO(LAYER_QWERTY), 	KC_NO, 															KC_NO, 			KC_LEFT, 	KC_UP, 				KC_DOWN, 			KC_RGHT, 	KC_NO, 	
+		KC_COMM, 	KC_PERC, 	KC_AT, 				KC_QUOT, 			KC_COLN, 			KC_NO, 															KC_NO, 			KC_0, 		KC_CIRC, 			KC_DLR, 			KC_NO, 		KC_NO, 
+		KC_SLSH, 	KC_LCBR, 	KC_SCLN, 			KC_LPRN, 			KC_PLUS, 			KC_NO, 															KC_ASTR, 		KC_RPRN, 	KC_EQL, 			KC_RCBR, 			KC_MINS, 	KC_NO, 
+		KC_HASH, 	KC_GRV, 	KC_AMPR, 			KC_QUES, 			KC_PIPE, 			KC_NO, 															KC_BSLS, 		KC_EXLM, 	KC_LBRC, 			KC_RBRC, 			KC_UNDS, 	KC_NO,
+								TO(LAYER_NUMS), 	TO(LAYER_BASE),		KC_SPC,				KC_LSFT, 			KC_TAB, 					TO(0), 			KC_LSFT,		KC_ENT, 	TO(LAYER_BASE), 	TO(LAYER_NUMS), 		
+																							KC_DEL,				KC_LCTL,					KC_RALT, 		KC_BSPC), 	
+							
+		[LAYER_QWERTY] = LAYOUT_5x6_5(					
+		KC_GRV, 	KC_1, 		KC_2, 		TO(0), 				TO(0),   					KC_NO, 															KC_6, 			KC_7, 		KC_8, 		KC_9, 				KC_0, 				KC_NO, 
+		KC_TAB, 	KC_Q, 		KC_W, 		KC_E, 				KC_R, 						KC_NO, 															KC_Y, 			KC_U, 		KC_I, 		KC_O, 				KC_P, 				KC_NO, 
+		LCTL_T(KC_CAPS), KC_A, 	KC_S, 		KC_D, 				KC_D, 						KC_NO, 															KC_G, 			KC_H, 		KC_J, 		KC_K, 				KC_L, 				KC_NO, 
+		KC_LSFT, 	KC_Z, 		KC_X, 		KC_C, 				KC_V, 						KC_NO, 															KC_N, 			KC_M, 		KC_COMM, 	KC_DOT, 			KC_SLSH, 			KC_NO, 
+											TO(LAYER_NUMS), 	TO(LAYER_MATHSYMS),			KC_SPC,				KC_TAB, 					KC_0, 			TO(0), 			KC_LSFT,	KC_ENT, 	TO(LAYER_NUMS), 	TO(LAYER_MATHSYMS), 		
+																							KC_DEL,				KC_LCTL,					KC_BSPC, 		KC_BSPC), 
 
         
 		
-		[LAYER_UNKNOWN4] = LAYOUT_5x6_5(
-		KC_ESC, 	KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 										KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 
-		KC_ESC, 	KC_ESC, 	LCTL(KC_W), LCTL(KC_T), LCTL(KC_PGDN),LCTL(KC_PGDN), 							KC_PGDN, 	KC_HOME, 	KC_UP, 		KC_INS, 	LSFT(KC_INS),KC_ESC, 
-		KC_TRNS, 	KC_CAPS, 	LGUI(KC_LEFT),LGUI(KC_TAB),LGUI(KC_RGHT),LGUI(KC_RGHT), 						KC_LEFT, 	KC_LEFT, 	KC_DOWN, 	KC_RGHT, 	KC_END, 	KC_PSCR, 
-		KC_TRNS, 	KC_NO, 		KC_NO, 		KC_NO, 		LCTL(KC_PGUP),LCTL(KC_PGUP), 							KC_PGUP, 	KC_TRNS, 	KC_DOWN, 	KC_NO, 		KC_APP, 	KC_TRNS, 
+		[LOCK] = LAYOUT_5x6_5(
+		KC_NO, 	KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 										KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 		KC_NO, 
+		KC_NO, 	KC_NO, 		KC_NO, 		KC_NO, 		KC_NO,		KC_NO, 							KC_PGDN, 	KC_HOME, 	KC_UP, 		KC_INS, 	LSFT(KC_INS),KC_ESC, 
+		KC_NO, 	KC_NO, 		KC_NO,		KC_NO,		KC_NO,		KC_NO, 						KC_LEFT, 	KC_LEFT, 	KC_DOWN, 	KC_RGHT, 	KC_END, 	KC_PSCR, 
+		KC_NO, 	KC_NO, 		KC_NO, 		KC_NO, 		KC_NO,		KC_NO, 							KC_PGUP, 	KC_TRNS, 	KC_DOWN, 	KC_NO, 		KC_APP, 	KC_TRNS, 
 								KC_TRNS, 	KC_TRNS, 	KC_TRNS, 	KC_SPC, 	KC_DEL, 			KC_ENT, 	KC_SPC, 	KC_BSPC, 	KC_TRNS, 	KC_TRNS, 
 																	TG(4), 		KC_TRNS, 			KC_ENT, 	KC_TRNS),
         
@@ -88,8 +88,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
-  debug_enable=true;
-  debug_matrix=true;
+  debug_enable=false;
+  debug_matrix=false;
   //debug_keyboard=true;
   //debug_mouse=true;
   
@@ -137,8 +137,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 			break; 
 
 		case LAYER_QWERTY:
-			rgb_matrix_mode_noeeprom(RGB_MATRIX_NONE);
-			rgb_matrix_sethsv_noeeprom(HSV_RED);
+			//rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_LEFT_RIGHT);
+			rgb_matrix_mode_noeeprom(RGB_MATRIX_RAINBOW_BEACON);
+			
 			break;
 		default: // for any other layers, or the default layer
 			rgb_matrix_mode_noeeprom(RGB_MATRIX_NONE);
