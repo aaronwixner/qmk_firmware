@@ -23,12 +23,12 @@ enum charybdis_keymap_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         [LAYER_BASE] = LAYOUT_5x6_5(	
-		KC_INS, 	KC_HOME, 			KC_END, 			KC_PGUP, 			KC_PGDN, 	KC_NO,	 												KC_ESC, 		KC_LEFT, 	KC_UP, 					KC_DOWN, 			KC_RGHT, 				KC_NO,
+		KC_INS, 	KC_PGUP, 			KC_HOME, 			KC_END,				KC_PGDN,	C_NO,	 												KC_ESC, 		KC_LEFT, 	KC_UP, 					KC_DOWN, 			KC_RGHT, 				KC_NO,
 		KC_QUOT, 	KC_COMM, 			KC_DOT, 			KC_P, 				KC_Y, 		KC_NO,	 												KC_F, 			KC_G, 		KC_C, 					KC_R, 				KC_L, 					KC_NO,
 		KC_A, 		KC_O, 				KC_E, 				KC_U, 				KC_I, 		KC_NO,	 												KC_D, 			KC_H, 		KC_T, 					KC_N, 				KC_S, 					KC_NO, 
 		KC_SCLN, 	KC_Q, 				KC_J, 				KC_K, 				KC_X, 		KC_NO, 													KC_B, 			KC_M, 		KC_W, 					KC_V, 				KC_Z, 					KC_NO, 
 										TT(LAYER_NUMS), 	TT(LAYER_MATHSYMS),	KC_SPC,		KC_LSFT, 	KC_TAB, 					KC_LGUI, 		KC_LSFT,		KC_ENT, 	TT(LAYER_MATHSYMS), 	TT(LAYER_NUMS), 		
-																							KC_DEL,		KC_LCTL,					KC_RALT, 		KC_BSPC), 
+																							KC_LCTL,	KC_DEL,						KC_RALT, 		KC_BSPC), 
 
 				
 		[LAYER_NUMS] = LAYOUT_5x6_5(		
@@ -44,7 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		RGB_MOD,	RGB_TOG, 	KC_NO, 				KC_NO, 				TO(LAYER_QWERTY), 	KC_NO, 															KC_NO, 			KC_LEFT, 	KC_UP, 				KC_DOWN, 			KC_RGHT, 	KC_NO, 	
 		KC_COMM, 	KC_PERC, 	KC_AT, 				KC_QUOT, 			KC_COLN, 			KC_NO, 															KC_NO, 			KC_0, 		KC_CIRC, 			KC_DLR, 			KC_NO, 		KC_NO, 
 		KC_SLSH, 	KC_LCBR, 	KC_SCLN, 			KC_LPRN, 			KC_PLUS, 			KC_NO, 															KC_ASTR, 		KC_RPRN, 	KC_EQL, 			KC_RCBR, 			KC_MINS, 	KC_NO, 
-		KC_HASH, 	KC_GRV, 	KC_AMPR, 			KC_QUES, 			KC_PIPE, 			KC_NO, 															KC_BSLS, 		KC_EXLM, 	KC_LBRC, 			KC_RBRC, 			KC_UNDS, 	KC_NO,
+		KC_HASH, 	KC_TILD, 	KC_AMPR, 			KC_QUES, 			KC_PIPE, 			KC_NO, 															KC_BSLS, 		KC_EXLM, 	KC_LBRC, 			KC_RBRC, 			KC_UNDS, 	KC_NO,
 								TO(LAYER_NUMS), 	TO(LAYER_BASE),		KC_SPC,				KC_LSFT, 			KC_TAB, 					TO(0), 			KC_LSFT,		KC_ENT, 	TO(LAYER_BASE), 	TO(LAYER_NUMS), 		
 																							KC_DEL,				KC_LCTL,					KC_RALT, 		KC_BSPC), 	
 							
